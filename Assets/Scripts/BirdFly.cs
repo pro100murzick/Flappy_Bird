@@ -6,10 +6,12 @@ public class BirdFly : MonoBehaviour
 {
     [SerializeField] float velocity = 1f;
     Rigidbody2D rb;
+    private bool isAlreadyTouched = false;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.isKinematic = true;
     }
 
     // Update is called once per frame
