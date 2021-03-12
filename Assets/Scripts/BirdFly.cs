@@ -17,9 +17,16 @@ public class BirdFly : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(0) && isAlreadyTouched == false)
+        {
+            isAlreadyTouched = true;
+            rb.isKinematic = false;
+            FindObjectOfType<PiperSpawner>().StartSpawning();
+            rb.velocity = Vector2.up * velocity;
+        }
         if (Input.GetMouseButtonDown(0))
         {
             rb.velocity = Vector2.up * velocity;
-        }
+        }    
     }
 }

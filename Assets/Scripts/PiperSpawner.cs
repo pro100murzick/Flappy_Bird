@@ -14,7 +14,12 @@ public class PiperSpawner : MonoBehaviour
     private Coroutine spawnPipesCoroutine;
 
     // Start is called before the first frame update
-    IEnumerator Start()
+    void Start()
+    {
+        
+    }
+
+    IEnumerator SpawnPipe()
     {
         while (true)
         {
@@ -30,6 +35,11 @@ public class PiperSpawner : MonoBehaviour
             yield return new WaitForSeconds(timeToSpawn);
             pipeNum = 1 - pipeNum;
         }
+    }
+
+    public void StartSpawning()
+    {
+        spawnPipesCoroutine = StartCoroutine(SpawnPipe());
     }
 
     private void CreateAndMove(GameObject pipe)
