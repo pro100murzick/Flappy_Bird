@@ -15,7 +15,7 @@ public class Level : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public void nApplicationQuit()
+    public void Quit()
     {
         Application.Quit();
     }
