@@ -24,6 +24,7 @@ public class BirdFly : MonoBehaviour
             rb.isKinematic = false;
             FindObjectOfType<PiperSpawner>().StartSpawning();
             manager.DisableStartUI();
+            manager.EnableScore();
             rb.velocity = Vector2.up * velocity;
         }
         if (Input.GetMouseButtonDown(0) && transform.position.y < 1.28)

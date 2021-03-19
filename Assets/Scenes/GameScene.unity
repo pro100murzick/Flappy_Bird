@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 94692985}
   - component: {fileID: 94692987}
   - component: {fileID: 94692986}
+  - component: {fileID: 94692988}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -199,6 +200,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94692984}
   m_CullTransparentMesh: 0
+--- !u!114 &94692988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94692984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5f43ac6b12ba94083a8ae3b69c6f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 94692986}
 --- !u!1 &504112701
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,7 +960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 1.4
-  manager: {fileID: 0}
+  manager: {fileID: 1553292986}
 --- !u!70 &1202603564
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1111,6 +1125,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.68, y: 0.56}
   m_EdgeRadius: 0
+--- !u!114 &1553292986 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 948227271115866325, guid: 163d3020d7f0ee24ca0fbab7d65b1d26,
+    type: 3}
+  m_PrefabInstance: {fileID: 948227270291249658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d5175c297675354e936910734b1c007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1701145203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,6 +1740,16 @@ PrefabInstance:
       propertyPath: gameOverComponents.Array.data[3]
       value: 
       objectReference: {fileID: 1882481309}
+    - target: {fileID: 948227271115866325, guid: 163d3020d7f0ee24ca0fbab7d65b1d26,
+        type: 3}
+      propertyPath: startGameComponents.Array.data[0]
+      value: 
+      objectReference: {fileID: 1858759020}
+    - target: {fileID: 948227271115866325, guid: 163d3020d7f0ee24ca0fbab7d65b1d26,
+        type: 3}
+      propertyPath: startGameComponents.Array.data[1]
+      value: 
+      objectReference: {fileID: 892002615}
     - target: {fileID: 948227271115866325, guid: 163d3020d7f0ee24ca0fbab7d65b1d26,
         type: 3}
       propertyPath: scoreObject
