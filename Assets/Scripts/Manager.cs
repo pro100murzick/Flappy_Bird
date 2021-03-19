@@ -7,14 +7,14 @@ public class Manager : MonoBehaviour
 {
 
     [SerializeField] GameObject[] gameOverComponents;
-    [SerializeField] GameObject[] startOverComponents;
+    [SerializeField] GameObject[] startGameComponents;
     [SerializeField] GameObject scoreObject;
 
     void Start()
     {
         Time.timeScale = 1; //Возобновление игры после паузы
         DisableUIComonents(gameOverComponents);
-        EnableUIComonents(startOverComponents);
+        EnableUIComonents(startGameComponents);
         scoreObject.SetActive(false);
     }
 
@@ -25,14 +25,14 @@ public class Manager : MonoBehaviour
 
     public void DisableStartUI()
     {
-        DisableUIComonents(startOverComponents);
+        DisableUIComonents(startGameComponents);
     }
 
     public void GameOver()
     {
         Time.timeScale = 0;
         EnableUIComonents(gameOverComponents);
-        DisableUIComonents(startOverComponents);
+        DisableUIComonents(startGameComponents);
     }
 
     private void DisableUIComonents(GameObject[] objectsToDisable)

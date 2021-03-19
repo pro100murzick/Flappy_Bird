@@ -5,6 +5,7 @@ using UnityEngine;
 public class BirdFly : MonoBehaviour
 {
     [SerializeField] float velocity = 1f;
+    [SerializeField] Manager manager;
     Rigidbody2D rb;
     private bool isAlreadyTouched = false;
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class BirdFly : MonoBehaviour
             isAlreadyTouched = true;
             rb.isKinematic = false;
             FindObjectOfType<PiperSpawner>().StartSpawning();
+            manager.DisableStartUI();
             rb.velocity = Vector2.up * velocity;
         }
         if (Input.GetMouseButtonDown(0) && transform.position.y < 1.28)
@@ -32,6 +34,6 @@ public class BirdFly : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        FindObjectOfType<Manager>().RestartGame();
+        manager.GameOver();
     }
 }
